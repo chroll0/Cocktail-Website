@@ -1,0 +1,40 @@
+.gallery-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery-content h2 {
+  font-size: 44px;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin-bottom: 4rem;
+}
+.images-box {
+  width: 100%;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  position: relative;
+}
+.images-box img {
+  width: 100%;
+}
+.hover-styles {
+  position: relative;
+  cursor: pointer;
+}
+.change-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+.images-box img:hover ~ .change-color,
+.change-color:hover {
+  background-color: #03c54472;
+  transition: 0.5s;
+}
