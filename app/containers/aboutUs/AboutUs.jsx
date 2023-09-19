@@ -3,7 +3,7 @@ import "./AboutUs.css";
 const aboutUs = () => {
   return (
     <div id="aboutUs" className="class-container">
-      <div className="main-text">
+      <div className="main-text animate__animated animate__fadeIn">
         <span>The Hunter's Bar</span>
         <h1>
           Welcome to <br />

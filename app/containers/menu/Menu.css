@@ -2,6 +2,9 @@
   background: var(--nav-background);
   padding: 4rem 10%;
 }
+.hide-elements {
+  opacity: 0;
+}
 .menu-content {
   display: flex;
   flex-direction: column;
@@ -33,17 +36,9 @@
   border: solid 4px #03c543;
   cursor: pointer;
 }
-.cocktails-container div:hover {
-  transition: 0.4s;
-  transform: scale(1.02);
-}
 .cocktails-information img {
-  width: 115%;
-  margin: 1.5rem 0;
-}
-.cocktails-information img:hover {
-  transition: 0.4s;
   width: 100%;
+  margin: 1.5rem 0;
 }
 .cocktails-information {
   display: flex;

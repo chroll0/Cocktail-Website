@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page.module.css";
+import "animate.css";
 
 import NavBar from "./components/NavBar";
 import AboutUs from "./containers/aboutUs/AboutUs";
@@ -9,7 +9,7 @@ import Contact from "./containers/contact/Contact";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <NavBar />
       <AboutUs />
       <Menu />
