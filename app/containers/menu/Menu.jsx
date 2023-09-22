@@ -68,6 +68,7 @@ const Menu = () => {
       id="menu"
       className="secondary-class-container hide-elements animate__animated"
     >
+      <div className="overlay"></div>
       <div className="menu-content ">
         <h2>Our menu</h2>
         <p className="menu-statement">make your choice</p>
@@ -75,15 +76,17 @@ const Menu = () => {
           {data.map((cocktail) => (
             <div
               className={`cocktails-information animate__animated ${
-                hoveredItemId === cocktail.idDrink ? "animate__headShake" : ""
+                hoveredItemId === cocktail.idDrink ? "animate__flip" : ""
               }`}
               key={cocktail.idDrink}
-              onMouseEnter={() => handleItemHover(cocktail.idDrink)}
+              onClick={() => handleItemHover(cocktail.idDrink)}
               onMouseLeave={() => handleItemHover(null)}
             >
               <h3>{cocktail.strDrink}</h3>
               <span>{cocktail.strCategory}</span>
-              <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+              <div className="image-container">
+                <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+              </div>
               <span>Description</span>
               <p>{cocktail.strInstructions}</p>
             </div>

@@ -30,7 +30,7 @@ const Gallery = () => {
   return (
     <div
       id="gallery"
-      className="secondary-class-container gallery-content animate__animated hide-elements"
+      className="gallery-content animate__animated hide-elements"
     >
       <h2>gallery</h2>
       <div className="images-box">

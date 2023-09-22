@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
+  position: relative;
+  z-index: 1;
 }
 .contacts-container-content h2 {
   font-size: 44px;

@@ -1,4 +1,5 @@
 .gallery-content {
+  padding: 4rem 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -18,12 +19,15 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   position: relative;
 }
-.images-box img {
-  width: 100%;
-}
 .hover-styles {
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+}
+.images-box img {
+  width: 100%;
+  object-fit: cover;
 }
 .change-color {
   width: 100%;
@@ -31,10 +35,15 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1;
+  z-index: -1;
 }
 .images-box img:hover ~ .change-color,
 .change-color:hover {
   background-color: #03c54472;
-  transition: 0.5s;
+  transition: 0.4s linear;
+  z-index: 1;
 }
+/* .images-box img:hover {
+  transform: scale(1.2);
+  transition: 0.2s linear;
+} */

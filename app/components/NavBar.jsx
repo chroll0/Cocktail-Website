@@ -5,6 +5,8 @@ import { MdMenuBook, MdRestaurantMenu } from "react-icons/md";
 
 const navBar = () => {
   const [navMenu, setNavMenu] = useState(false);
+  const [hoveredIcon, setHoveredIcon] = useState(false);
+
   return (
     <nav>
       <div className="navbar-logo">
@@ -12,9 +14,14 @@ const navBar = () => {
           <img
             src="/cocktail.png"
             alt="logo"
-            width={27}
-            height={28}
+            width={33}
+            height={33}
             cursor="pointer"
+            className={`animate__animated ${
+              !hoveredIcon ? "" : "animate__wobble"
+            }`}
+            onMouseEnter={() => setHoveredIcon(!hoveredIcon)}
+            onMouseLeave={() => setHoveredIcon(!hoveredIcon)}
           />
         </a>
       </div>

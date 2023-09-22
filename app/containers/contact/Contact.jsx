@@ -61,6 +61,7 @@ const Contacts = () => {
 
   return (
     <div id="contact" className="secondary-class-container">
+      <div className="overlay"></div>
       <div className="contacts-container-content">
         <h2>Contact</h2>
         <div className="contact-information">
